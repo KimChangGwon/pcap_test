@@ -7,30 +7,30 @@
 
 #pragma pack(1)
 struct new_iphdr{
-	unsigned char version_and_hdrlen;
-	unsigned char service_type;
-	unsigned short total_len;
-	unsigned short identification;
-	unsigned short Offset;
-	unsigned char TTL;
-	unsigned char Protocol_ID;
-	unsigned short checksum;
-	unsigned int srcIP;
-	unsigned int destIP;
+	uint8_t version_and_hdrlen;
+	uint8_t service_type;
+	uint16_t total_len;
+	uint16_t identification;
+	uint16_t Offset;
+	uint8_t TTL;
+	uint8_t Protocol_ID;
+	uint16_t checksum;
+	uint32_t srcIP;
+	uint32_t destIP;
 };
 #pragma pack()
 
 #pragma pcak(1)
 struct new_tcphdr{
-	unsigned short srcport;
-	unsigned short dstport;
-	unsigned int seqnum;
-	unsigned int acknum;
-	unsigned char reserved:4;
-	unsigned char data_offset:4;
-	unsigned char flags;
-	unsigned short window;
-	unsigned short checksum;
-	unsigned short urgent;
+	uint16_t srcport;
+	uint16_t dstport;
+	uint32_t seqnum;
+	uint32_t acknum;
+	uint8_t reserved:4;
+	uint8_t data_offset:4;
+	uint8_t flags;
+	uint16_t window;
+	uint16_t checksum;
+	uint16_t urgent;
 };
 #pragma pack()
